@@ -9,9 +9,11 @@ class JogoDaVelha {
 
     //Estrutura do jogo
     int rounds = 0;
+    List<string> juiz = new List<string>();
 
     for (int i = 0; i < tabuleiro.Length; i++) {
       tabuleiro[i] = info.ToString();
+      juiz.Add(info.ToString());
       info++;
     }
 
@@ -24,12 +26,21 @@ class JogoDaVelha {
 
     //Interação com o player
     string jogada = Console.ReadLine();
+
+    //Validação
+    while (!juiz.Contains(jogada)) {
+      Console.WriteLine("Selecione posição válida");
+      jogada = Console.ReadLine();
+    }
+
+
     Console.Clear();
 
     while (rounds < 9) {
       for (int i = 0; i < tabuleiro.Length; i++) {
         if (tabuleiro[i] == jogada) {
           tabuleiro[i] = xo;
+          juiz.Remove(jogada);
         }
       }
 
@@ -40,6 +51,7 @@ class JogoDaVelha {
         }
       }
 
+
       if (xo == "X") {
         xo = "O";
       }
@@ -47,8 +59,14 @@ class JogoDaVelha {
         xo = "X";
       }
 
-      jogada = Console.ReadLine();
       rounds++;
+      jogada = Console.ReadLine();
+
+      while (!juiz.Contains(jogada)) {
+        Console.WriteLine("Selecione posição válida");
+        jogada = Console.ReadLine();
+      }
+
       Console.Clear();
     }
   }
