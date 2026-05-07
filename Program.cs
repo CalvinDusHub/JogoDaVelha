@@ -55,37 +55,43 @@ class JogoDaVelha {
       //Horizontal
       if (tabuleiro[0] == tabuleiro[1] && tabuleiro[0] == tabuleiro[2]) {
         Console.WriteLine($"{xo} ganhou");
-        break;
+        return;
       }
       else if (tabuleiro[3] == tabuleiro[4] && tabuleiro[3] == tabuleiro[5]) {
         Console.WriteLine($"{xo} ganhou");
-        break;
+        return;
       }
       else if (tabuleiro[6] == tabuleiro[7] && tabuleiro[6] == tabuleiro[8]) {
         Console.WriteLine($"{xo} ganhou");
-        break;
+        return;
       }
       //Vertical
       else if (tabuleiro[0] == tabuleiro[3] && tabuleiro[0] == tabuleiro[6]) {
         Console.WriteLine($"{xo} ganhou");
-        break;
+        return;
       }
       else if (tabuleiro[1] == tabuleiro[4] && tabuleiro[1] == tabuleiro[7]) {
         Console.WriteLine($"{xo} ganhou");
-        break;
+        return;
       }
       else if (tabuleiro[2] == tabuleiro[5] && tabuleiro[2] == tabuleiro[8]) {
         Console.WriteLine($"{xo} ganhou");
-        break;
+        return;
       }
       //Diagonal
       else if (tabuleiro[0] == tabuleiro[4] && tabuleiro[0] == tabuleiro[8]) {
         Console.WriteLine($"{xo} ganhou");
-        break;
+        return;
       }
       else if (tabuleiro[2] == tabuleiro[4] && tabuleiro[2] == tabuleiro[6]) {
         Console.WriteLine($"{xo} ganhou");
-        break;
+        return;
+      }
+
+      //Empate (velha)
+      if (juiz.Count == 0) {
+        Console.WriteLine("velha");
+        return;
       }
 
       if (xo == "X") {
@@ -99,14 +105,15 @@ class JogoDaVelha {
 
       jogada = Console.ReadLine();
 
-
       while (!juiz.Contains(jogada)) {
         Console.WriteLine("Selecione posição válida");
         jogada = Console.ReadLine();
-
       }
 
       Console.Clear();
     }
+
+
+    Console.WriteLine("velha");
   }
 }
