@@ -33,7 +33,6 @@ class JogoDaVelha {
       jogada = Console.ReadLine();
     }
 
-
     Console.Clear();
 
     while (rounds < 9) {
@@ -51,6 +50,43 @@ class JogoDaVelha {
         }
       }
 
+      //Condição de Vitoria
+
+      //Horizontal
+      if (tabuleiro[0] == tabuleiro[1] && tabuleiro[0] == tabuleiro[2]) {
+        Console.WriteLine($"{xo} ganhou");
+        break;
+      }
+      else if (tabuleiro[3] == tabuleiro[4] && tabuleiro[3] == tabuleiro[5]) {
+        Console.WriteLine($"{xo} ganhou");
+        break;
+      }
+      else if (tabuleiro[6] == tabuleiro[7] && tabuleiro[6] == tabuleiro[8]) {
+        Console.WriteLine($"{xo} ganhou");
+        break;
+      }
+      //Vertical
+      else if (tabuleiro[0] == tabuleiro[3] && tabuleiro[0] == tabuleiro[6]) {
+        Console.WriteLine($"{xo} ganhou");
+        break;
+      }
+      else if (tabuleiro[1] == tabuleiro[4] && tabuleiro[1] == tabuleiro[7]) {
+        Console.WriteLine($"{xo} ganhou");
+        break;
+      }
+      else if (tabuleiro[2] == tabuleiro[5] && tabuleiro[2] == tabuleiro[8]) {
+        Console.WriteLine($"{xo} ganhou");
+        break;
+      }
+      //Diagonal
+      else if (tabuleiro[0] == tabuleiro[4] && tabuleiro[0] == tabuleiro[8]) {
+        Console.WriteLine($"{xo} ganhou");
+        break;
+      }
+      else if (tabuleiro[2] == tabuleiro[4] && tabuleiro[2] == tabuleiro[6]) {
+        Console.WriteLine($"{xo} ganhou");
+        break;
+      }
 
       if (xo == "X") {
         xo = "O";
@@ -60,11 +96,14 @@ class JogoDaVelha {
       }
 
       rounds++;
+
       jogada = Console.ReadLine();
+
 
       while (!juiz.Contains(jogada)) {
         Console.WriteLine("Selecione posição válida");
         jogada = Console.ReadLine();
+
       }
 
       Console.Clear();
