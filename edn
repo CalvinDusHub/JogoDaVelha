@@ -1,0 +1,35 @@
+[33mcommit c746e9f22d004848a081d424c5af76c673193a9f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: CalvinDusHub <calvinmateus@gmail.com>
+Date:   Thu May 7 09:56:31 2026 -0300
+
+    Adicionado empate, melhoria no formato do código
+
+[33mcommit 54b9b34f2de093854e518f884c977c9b93d42d70[m
+Author: CalvinDusHub <calvinmateus@gmail.com>
+Date:   Thu May 7 09:30:57 2026 -0300
+
+    Adiciona condição de vitória no jogo da velha
+
+[33mcommit 451c9aeff37e45bb0bba04460a656e4d62c5e006[m
+Author: CalvinDusHub <calvinmateus@gmail.com>
+Date:   Wed May 6 20:29:51 2026 -0300
+
+    Implementa lógica completa do jogo da velha com validação e alternância de turnos
+
+[33mcommit 215638cef65d22306553c62acef5b4858a157cfb[m
+Author: CalvinDusHub <calvinmateus@gmail.com>
+Date:   Wed May 6 19:37:05 2026 -0300
+
+    Adiciona seleção de jogada e alternância de turnos
+
+[33mcommit 3e9c2bc8c1b4fdc97105c989c9c6093ffff26a97[m
+Author: CalvinDusHub <calvinmateus@gmail.com>
+Date:   Wed May 6 18:29:11 2026 -0300
+
+    Cria estrutura inicial do tabuleiro
+
+[33mcommit c5c4c17ee263b6c5b64ba0d213b7fc091992f710[m
+Author: CalvinDusHub <calvinmateus@gmail.com>
+Date:   Wed May 6 17:36:37 2026 -0300
+
+    Projeto inicial jogo da velha em C#
