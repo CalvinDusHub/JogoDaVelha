@@ -121,8 +121,5 @@ class JogoDaVelha {
 
       Console.Clear();
     }
-
-
-    Console.WriteLine("velha");
   }
 }
